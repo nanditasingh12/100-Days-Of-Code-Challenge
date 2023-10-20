@@ -101,7 +101,7 @@ First Test:i love ice cream and man goi love ice cream and mangoi love icecream 
 
 
 
-#Day 2: Topic-Recursion:
+#Day 3: Topic-Recursion:
 Here we will print the no. from 5 to 1 using recursion which also includes a base condition:
 public class Recursion{
     public static void printnos(int n){
@@ -124,3 +124,30 @@ public class Recursion{
 1
 
 
+#Day 4, Topic:Arrays
+# Intersection Of two arrays:
+class Solution(object):
+    def intersect(self, nums1, nums2):
+
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+       m = {}
+       if len(nums1) < len(nums2):
+          nums1,nums2 = nums2,nums1
+       for i in nums1:
+           if i  not in m:
+	       m[i] = 1
+	   else:
+               m[i] += 1
+	result = []
+        for i in nums2:
+            if i in m and m[i]:
+	       m[i] -= 1
+	    result.append[i]
+         return result
+     
+	      
+       
